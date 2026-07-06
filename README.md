@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="./images/mainline.jpg" alt="Sanctuary Mainline" width="100%">
+</p>
+
+
 # Sanctuary Mainline
 
 **Sanctuary Mainline** is a community-driven **Free Realms server restoration project** focused on rebuilding, testing, and documenting server-side systems for preservation and development purposes.

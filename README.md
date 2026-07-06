@@ -60,61 +60,38 @@ The goal is to make these systems easier to understand, test, improve, and event
 | **Combat System** <br><br> ‼️ Combat <br><br> <sub>This place is basically a magical disaster zone.</sub> <br><br> <sub>Archer, Brawler, Medic, Ninja, Warrior… and of course, Wizard.</sub> <br><br> <sub>Right now the combat system is being held together by temporary logic, unstable math, and one suspicious wizard making mysterious noises in the background.</sub>                                                                                                                                                                                                                                                                                                   | **Future Systems** <br><br> 💤 Housing <br> 💤 Pets <br> 💤 Guilds <br> 💤 Marketplace <br> 💤 Social systems <br><br> <sub>These systems are not the current main focus, but they may be researched later.</sub>                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 ---
-
-## Launcher Notes
-
-Sanctuary Mainline is also focused on making the Free Realms launcher more reliable for normal users.
-
-Earlier testing showed that installing the launcher or game files directly into `Program Files` may cause permission-related issues on Windows.
-
-Because of this, the launcher is being prepared around an **AppData-based structure** to reduce permission problems and make the setup easier.
-
-Current launcher goals:
-
-* Cleaner installation path
-* Fewer Windows permission issues
-* Easier setup for non-technical users
-* Better file organization
-* Future update support
-* Dependency checking
-* Runtime detection
-* Repair options for missing or broken files
-
----
-
 ## Technical Notes
 
-Some restored systems appear to depend on separate data files, GFX files, cache files, or special service responses.
+Some Free Realms systems appear to depend on separate data files, GFX files, cache files, service responses, or special transition logic.
 
-Because of this, some features may appear to open correctly but still fail later during loading, summary screens, content cache checks, or internal game transitions.
+Because of this, a feature may open, connect, or launch successfully, but still fail when the client expects another server response, content cache entry, summary file, or missing data structure.
 
-In simple terms:
-
-> The gate may open, but the ancient machine behind it may still demand another cursed file.
-
-This is why some features are marked as partially working or unstable.
+This project is focused on understanding and rebuilding those missing server-side parts.
 
 ---
 
 ## Current Focus
 
-The current development focus is:
+The current focus of Sanctuary Mainline includes:
 
-* Testing minigame launch behavior
-* Checking missing data requirements
-* Improving launcher stability
-* Preparing better packaging
+* Testing minigame server behavior
+* Restoring missing service responses
 * Investigating TCG content loading
 * Researching combat system logic
 * Testing world-based minigame entries
-* Reducing crashes and broken transitions
+* Checking GFX transition requirements
+* Improving server-side stability
+* Reconstructing missing or incomplete data
+* Documenting how restored systems work
 
 ---
 
 ## Disclaimer
 
-Sanctuary Mainline is an independent community project created for Free Realms-related preservation, research, and development purposes.
+Sanctuary Mainline is an independent community project created for Free Realms preservation, research, and development purposes.
 
 This project is not affiliated with, endorsed by, or officially connected to Sony Online Entertainment, Daybreak Game Company, or any original Free Realms rights holders.
 
 All Free Realms-related names, assets, and references belong to their respective owners.
+
+---

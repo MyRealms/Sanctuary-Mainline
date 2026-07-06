@@ -1,265 +1,115 @@
+# Sanctuary Mainline
 
-<a id="readme-top"></a>
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
-
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/Open-Source-Free-Realms/Sanctuary">
-    <img src="images/logo.png" alt="Logo" width="137" height="80">
-  </a>
+**Sanctuary Mainline** is a community-driven **Free Realms server restoration project** focused on rebuilding, testing, and documenting server-side systems for preservation and development purposes.
 
-<h3 align="center">Sanctuary</h3>
-
-  <p align="center">
-    Sanctuary is an open source server emulator for Free Realms built from scratch written in C#.
-    <br />
-    <a href="https://github.com/Open-Source-Free-Realms/Sanctuary/wiki"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/Open-Source-Free-Realms/Sanctuary">View Demo</a>
-    ·
-    <a href="https://github.com/Open-Source-Free-Realms/Sanctuary/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/Open-Source-Free-Realms/Sanctuary/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
-</div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
+This project is not just a launcher or a client tool.
+It is mainly focused on the server files, service logic, packet behavior, minigame systems, world entry systems, and backend structures required to bring Free Realms features back to life.
 
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
+Some systems are partially working, some are unstable, and some are currently sleeping inside ancient data files guarded by mysterious GFX rituals.
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/Open-Source-Free-Realms/Sanctuary)
+> Sanctuary is not just a path into the realm.
+> It is the machine trying to wake the realm back up.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+---
 
+## About Sanctuary Mainline
 
+Sanctuary Mainline focuses on restoring and testing Free Realms server-side functionality.
 
-### Built With
+The project includes research and development around:
 
-* [![CSharp][CSharp]][CSharp-url]
+* Server files
+* Service responses
+* Packet handling
+* Minigame logic
+* TCG service restoration
+* Combat system behavior
+* World/minigame entry systems
+* GFX transitions and summary screens
+* Data cache and content loading
+* Missing data reconstruction
+* Experimental logic for incomplete systems
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+The goal is to make these systems easier to understand, test, improve, and eventually preserve in a cleaner and more maintainable way.
 
+## Status Legend
 
+| Icon | Meaning                                |
+| ---- | -------------------------------------- |
+| ✅    | Working / mostly working               |
+| ☑️   | Partially working / needs more data    |
+| 💤   | Not finished / sleeping / needs work   |
+| 🔍   | Active research / investigation        |
+| 🔬   | Experimental                           |
+| ‼️   | Very unstable / dangerous magical zone |
+| ⁉️   | Unknown / mysterious                   |
 
-<!-- GETTING STARTED -->
-## Getting Started
+---
 
-This repository only contains the **server emulator** for Free Realms. To play the game, you must also have a **Free Realms client**. You can download the client using the **OSFR Launcher** available here: [OSFR Launcher](https://github.com/Open-Source-Free-Realms/Launcher).
+## Development Progress
 
-### Prerequisites
+| Core Systems                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | World / Extra Systems                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Minigames** <br><br> ✅ Checkers <br> ✅ Chess <br> 💤 Mining <br><sub>I think I found a small bug, checking it.</sub> <br> 💤 Forging <br> 💤 Cooking <br><sub>A bit unstable, still needs recipe systems.</sub> <br> 💤 Harvesting <br> 💤 Smelting <br> 💤 Tower Defense <br> ☑️ Micro-games <br> 💤 Wheels <br> 💤 Treasure War <br> 💤 Pirates Plunderer <br> ☑️ Spot the Difference <br><sub>Still unstable, needs more data.</sub> <br><br> <sub>It looks like each minigame uses its own separate data file or something similar.</sub> <br><br> <sub>I’m preparing a bit of **arcane machine learning magic** to generate estimated data for the missing parts.</sub> | **Minigame Worlds** <br><br> 🔍 Fishing <br><sub>Worlds are active, but not finished yet.</sub> <br> 🔍 Karts <br><sub>Worlds are active, but not finished yet.</sub> <br> 🔍 Derby <br><sub>Worlds are active, but not finished yet.</sub> <br> 💤 Soccer <br> ⁉️ Battles <br><br> <sub>There’s also good news from the racing world.</sub> <br><br> <sub>But because approximately seventeen billion extra GFX files are scattered across reality, the race car key may currently exist in another dimension.</sub> <br><br> <sub>It is believed that organizing files properly would anger the ancient tech gods.</sub> |
+| **Integrated TCG Game** <br><br> 🔬 Trading Card Game <br><br> <sub>After a very long silence… the TCG service has finally been reactivated.</sub> <br><br> <sub>The launch gate is open. The native login gate is open.</sub> <br><br> <sub>Now we stand before the mysterious **TCG data cache / content loading** gate.</sub>                                                                                                                                                                                                                                                                                                                                               | **Boombox Thing** <br><br> 🧪 Boombox Packet <br><br> <sub>I wrote a special packet for the Boombox.</sub> <br><br> <sub>Haven’t tested it yet, but eventually I’ll perform that chaotic ritual too.</sub>                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Combat System** <br><br> ‼️ Combat <br><br> <sub>This place is basically a magical disaster zone.</sub> <br><br> <sub>Archer, Brawler, Medic, Ninja, Warrior… and of course, Wizard.</sub> <br><br> <sub>Right now the combat system is being held together by temporary logic, unstable math, and one suspicious wizard making mysterious noises in the background.</sub>                                                                                                                                                                                                                                                                                                   | **Future Systems** <br><br> 💤 Housing <br> 💤 Pets <br> 💤 Guilds <br> 💤 Marketplace <br> 💤 Social systems <br><br> <sub>These systems are not the current main focus, but they may be researched later.</sub>                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-Before you can use this software, ensure you have the following installed:
+---
 
-- **Visual Studio 2022**  
-  Make sure to include the **.NET Framework development workload** during installation.
+## Launcher Notes
 
-### Release
+Sanctuary Mainline is also focused on making the Free Realms launcher more reliable for normal users.
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/Open-Source-Free-Realms/Sanctuary.git
-   ```
-2. Build the solution for `Sanctuary.Core` for `Release`
-3. Create a file named `database.json` in the `Release` folder located within the new `bin` folder
-4. Paste the following
-   ```json
-    {
-    "Database": {
-        "Provider": "Sqlite",
-        "ConnectionString": "Data Source=D:\\Games\\Free Realms\\sanctuary.db;"
-    }
-   ```
-5. Launch `Sanctuary.Login`, `Sanctuary.Gateway`
-6. Connect to the client
+Earlier testing showed that installing the launcher or game files directly into `Program Files` may cause permission-related issues on Windows.
 
-**_IMPORTANT:_** Update the Data Source file path (D:\\Games\\Free Realms\\sanctuary.db) to match the location where your database files are stored.
+Because of this, the launcher is being prepared around an **AppData-based structure** to reduce permission problems and make the setup easier.
 
-**_NOTE:_** The following user should already exist, but if not then implement one with the following credentials:
+Current launcher goals:
 
-```sh
-1	admin	admin	EXmdPd5dbAcs58vZ0iCcPRtJkGdMePL2	10	0	1	1	2024-06-22 13:51:13.2736902+01:00	2024-07-14 01:57:45.8765645+00:00
-```
+* Cleaner installation path
+* Fewer Windows permission issues
+* Easier setup for non-technical users
+* Better file organization
+* Future update support
+* Dependency checking
+* Runtime detection
+* Repair options for missing or broken files
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+---
 
-### Debug
+## Technical Notes
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/Open-Source-Free-Realms/Sanctuary.git
-   ```
-2. Build the solution for `Sanctuary.Core` for `Debug`
-3. Right-Click **'Manage User Secrets'** for the following projects:
-   - `Sanctuary.Gateway`
-   - `Sanctuary.Login`
-   - `Sanctuary.Database`
+Some restored systems appear to depend on separate data files, GFX files, cache files, or special service responses.
 
-4. Copy and paste the following configuration for **SQLite** into the secrets editor:
+Because of this, some features may appear to open correctly but still fail later during loading, summary screens, content cache checks, or internal game transitions.
 
-   ```json
-   {
-     "Database": {
-       "Provider": "Sqlite",
-       "ConnectionString": "Data Source=D:\\Games\\Free Realms\\sanctuary.db;"
-     }
-   }
-5. Launch `Sanctuary.Login`, `Sanctuary.Gateway`
-6. Connect to the client
+In simple terms:
 
-**_IMPORTANT:_** Update the Data Source file path (D:\\Games\\Free Realms\\sanctuary.db) to match the location where your database files are stored.
+> The gate may open, but the ancient machine behind it may still demand another cursed file.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+This is why some features are marked as partially working or unstable.
 
-### Docker Compose
+---
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/Open-Source-Free-Realms/Sanctuary.git
-   ```
-2. Launch `Docker Compose`
-3. Connect to the client
+## Current Focus
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+The current development focus is:
 
-<!-- USAGE EXAMPLES -->
-## Usage
+* Testing minigame launch behavior
+* Checking missing data requirements
+* Improving launcher stability
+* Preparing better packaging
+* Investigating TCG content loading
+* Researching combat system logic
+* Testing world-based minigame entries
+* Reducing crashes and broken transitions
 
-To spawn an npc ```/npc spawn <NameId> <ModelId> [TextureAlias]``` TextureAlias is optional
+---
 
-_For more examples, please refer to the [Documentation](https://github.com/Open-Source-Free-Realms/Sanctuary/wiki)_
+## Disclaimer
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Sanctuary Mainline is an independent community project created for Free Realms-related preservation, research, and development purposes.
 
+This project is not affiliated with, endorsed by, or officially connected to Sony Online Entertainment, Daybreak Game Company, or any original Free Realms rights holders.
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/Open-Source-Free-Realms/Sanctuary/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Top contributors:
-
-<a href="https://github.com/Open-Source-Free-Realms/Sanctuary/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Open-Source-Free-Realms/Sanctuary" alt="contrib.rocks image" />
-</a>
-
-
-
-<!-- LICENSE -->
-<!-- ## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-
-
-<!-- CONTACT -->
-<!-- ## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/Open-Source-Free-Realms/Sanctuary](https://github.com/Open-Source-Free-Realms/Sanctuary)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Open-Source-Free-Realms/Sanctuary.svg?style=for-the-badge
-[contributors-url]: https://github.com/Open-Source-Free-Realms/Sanctuary/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Open-Source-Free-Realms/Sanctuary.svg?style=for-the-badge
-[forks-url]: https://github.com/Open-Source-Free-Realms/Sanctuary/network/members
-[stars-shield]: https://img.shields.io/github/stars/Open-Source-Free-Realms/Sanctuary.svg?style=for-the-badge
-[stars-url]: https://github.com/Open-Source-Free-Realms/Sanctuary/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Open-Source-Free-Realms/Sanctuary.svg?style=for-the-badge
-[issues-url]: https://github.com/Open-Source-Free-Realms/Sanctuary/issues
-[license-shield]: https://img.shields.io/github/license/Open-Source-Free-Realms/Sanctuary.svg?style=for-the-badge
-[license-url]: https://github.com/Open-Source-Free-Realms/Sanctuary/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.jpg
-[CSharp]: https://img.shields.io/badge/csharp-000000?style=for-the-badge&logo=csharp&logoColor=white
-[CSharp-url]: https://dotnet.microsoft.com/en-us/languages/csharp
+All Free Realms-related names, assets, and references belong to their respective owners.
